@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCard> = ({data}) => {
   return (
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3">
         <div className="aspect-square rounded-xl bg-gray-100 relative">
-            <Image src={data?.images?.[0]?.url} fill alt="Image" className="aspect-square object-cover rounded-md"/>
+            <Image src={data?.images?.[0]?.url} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image" className="aspect-square object-cover rounded-md"/>
             <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
                 <div className="flex gap-x-6 justify-center">
                     <IconButton onClick={onPreview} icon={<Expand size={20} className="text-gray-600" />} />
